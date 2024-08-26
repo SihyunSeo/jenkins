@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping(method = RequestMethod.GET, value="/test")
     public ResponseEntity<String> test() {
-        return ResponseEntity.ok("v4");
+        return ResponseEntity.ok("v5");
     }
 }
