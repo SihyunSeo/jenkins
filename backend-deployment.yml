@@ -17,5 +17,18 @@ spec:
     spec:
       containers:
         - name: backend
-          image: hyunily/backend:latest
-      terminationGracePeriodSeconds: 3
+          image: hyunily/backend:1.8
+          readinessProbe:
+            httpGet:
+              path: /test
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            successThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /test
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 10
+      terminationGracePeriodSeconds: 0
