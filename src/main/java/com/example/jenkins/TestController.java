@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
     @RequestMapping(method = RequestMethod.GET, value="/test")
-    public ResponseEntity<String> test() {
-        return ResponseEntity.ok("v5");
+    public String test() {
+        return "v6";
     }
 }
