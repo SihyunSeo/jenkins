@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping(method = RequestMethod.GET, value="/test")
     public String test() {
-        return "v7";
+        return "v1-2024.09.24";
     }
 }
